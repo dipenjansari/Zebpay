@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="activityFeedData"
+            type="com.zebpay.demo.dipen.jansari.model.ActivityFeedData" />
+
+        <variable
+            name="homeViewModel"
+            type="com.zebpay.demo.dipen.jansari.viewModel.HomeViewModel" />
+
+        <variable
+            name="onClick"
+            type="com.zebpay.demo.dipen.jansari.interfaces.ClickListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frm_feed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{onClick.onClick}"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/scale_5dp"
+        android:paddingLeft="@dimen/scale_16dp"
+        android:paddingRight="@dimen/scale_16dp"
+        android:paddingTop="@dimen/scale_5dp">
+
+        <ImageView
+            android:id="@+id/img_feed"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_circle_feed"
+            android:padding="@dimen/scale_8dp"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/ll_feed_contain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="-8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounded_square_feed"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/scale_3dp"
+            android:paddingLeft="@dimen/scale_10dp"
+            android:paddingRight="@dimen/scale_10dp"
+            android:paddingTop="@dimen/scale_3dp">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="@{activityFeedData.title}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/scale_3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|left"
+                    android:text="@{activityFeedData.description}"
+                    android:textSize="@dimen/text_12sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txt_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end|right"
+                    android:text="@{activityFeedData.time}"
+                    android:textSize="@dimen/text_12sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

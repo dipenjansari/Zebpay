@@ -1,0 +1,80 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.zebpay.demo.dipen.jansari"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'Boolean', 'IsLogVisible', 'false'
+            buildConfigField 'Boolean', 'IsRelease', 'true'
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'Boolean', 'IsLogVisible', 'true'
+            buildConfigField 'Boolean', 'IsRelease', 'false'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+
+repositories {
+    maven {
+        url 'http://dl.bintray.com/amulyakhare/maven'
+    }
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.google.android.gms:play-services-gcm:11.0.1'
+
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+
+    //RETROFIT
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+
+    //GLIDE
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    //CRASHLYTICS
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+}

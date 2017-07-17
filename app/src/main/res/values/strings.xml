@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Zebpay android demo</string>
+    <string name="cd_image_logo">ImageLogo</string>
+    <string name="space">" "</string>
+    <string name="rupee">\u20B9</string>
+    <string name="bitcoin">"\u0243"</string>
+    <string name="approx">\u2248</string>
+    <string name="alert_unable_to_load_data">Unable to load the data</string>
+    <string name="title_home_activity">Zebpay Activity</string>
+    <string name="buy_one_bitcoin">buy 1"\u0243" =</string>
+    <string name="sell_one_bitcoin">sell 1"\u0243" =</string>
+    <string name="zebpay_rate_alert">Zebpay rate alert</string>
+    <string name="sell">"SELL "</string>
+    <string name="seperator">" | "</string>
+    <string name="buy">"BUY "</string>
+    <string name="settings">Settings</string>
+    <string name="variance_by_percentage">Variance by Percentage</string>
+    <string name="enter_percentage">Enter Percentage</string>
+    <string name="cancel">Cancel</string>
+    <string name="set">SET</string>
+    <string name="enter_rupees">Enter Rupees</string>
+    <string name="variance_by_rupee">Variance by Rupee</string>
+    <string name="enter_valid_rupees">Enter valid rupees</string>
+    <string name="percentage_in_between_zero_to_hundread">Percentage should be in between 0 to 100</string>
+    <string name="variation_found_in_market_value_percentage">Variation found in market value in terms of provided percentage.</string>
+    <string name="variation_found_in_market_value_rupees">Variation found in market value in terms of provided rupees.</string>
+    <string name="alert_connect_to_the_internet">Connect to the Internet</string>
+    <string name="msg_variation_in_percentage">You will get to notify if any variance we will find in provided percentage.</string>
+    <string name="msg_variation_in_rupee">You will get to notify if any variance we will find in provided rupees.</string>
+    <string name="join_message">User joins zebpay</string>
+    <string name="zebian_send_message">A zebpay user sent coins to other zebpay user</string>
+    <string name="other_send_message">User sent bitcoins to other user</string>
+    <string name="bitcoin_send_message">User sent bitcoins to other user</string>
+    <string name="magic_moment_send_message">User sent magic moment to other zebpay user</string>
+    <string name="bitcoin_received_message">User received bitcoins</string>
+    <string name="bitcoin_buy_message">Bitcoin buy or sell</string>
+    <string name="voucher_purchased_message">User purchased voucher</string>
+    <string name="airtime_purchased_message">User purchased air time</string>
+</resources>

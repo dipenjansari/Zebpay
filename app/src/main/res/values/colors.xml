@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00AEE7</color>
+    <color name="colorPrimaryDark">#0079a0</color>
+    <color name="colorAccent">#0079a0</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="darkRed">#aa2e2e</color>
+
+    <color name="feedBorder1">#00AEE7</color>
+    <color name="feedColor1">#F1FCFE</color>
+
+    <color name="feedBorder2">#7D7D7D</color>
+    <color name="feedColor2">#FFFFFF</color>
+
+    <color name="feedBorder3">#C8C767</color>
+    <color name="feedColor3">#FFFFE8</color>
+</resources>
